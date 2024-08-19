@@ -18,8 +18,9 @@ namespace CursoAlexP.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int id) //<-- can be string
         {
+            ViewData["id"] = id;
             return View();
         }
 
